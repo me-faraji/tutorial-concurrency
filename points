@@ -1,0 +1,4 @@
+The other methods also internally use this method to start a thread, except 'virtual threads'.
+The start() method is responsible for 'registering the thread with the platform thread scheduler' and doing all the other mandatory activities such as 'resource allocations'.
+different ways of creating and starting a new Thread in java: Thread class, Runnable interface, Callable interface, ExecutorService and even virtual threads.
+************************************************************************************************************************
