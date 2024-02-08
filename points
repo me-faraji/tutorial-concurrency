@@ -2,3 +2,6 @@ The other methods also internally use this method to start a thread, except 'vir
 The start() method is responsible for 'registering the thread with the platform thread scheduler' and doing all the other mandatory activities such as 'resource allocations'.
 different ways of creating and starting a new Thread in java: Thread class, Runnable interface, Callable interface, ExecutorService and even virtual threads.
 ************************************************************************************************************************
+Oracle specified the reason for deprecating the stop() method as It is inherently unsafe. Stopping a thread causes it to unlock all its locked monitors.
+To ensure that both threads see the same value all the time, we must make the flag variable volatile.
+    Or we can use AtomicBoolean class that supports atomic operations on an underlying volatile boolean variable.
